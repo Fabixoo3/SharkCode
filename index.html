@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SharkCode</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;color:#fff;background:#001f3f;overflow-x:hidden;position:relative;}
+.code-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;opacity:0.05;background:url('code-bg.png')repeat;font-size:0;animation:bgmove 90s linear infinite}
+@keyframes bgmove{from{background-position:0 0;}to{background-position:10000px 10000px}}
+nav{position:fixed;top:0;left:0;width:100%;background:rgba(0,31,63,0.9);padding:15px 40px;display:flex;align-items:center;justify-content:space-between;z-index:10}
+nav img{height:45px}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:#fff;text-decoration:none;font-weight:600;transition:color .3s}
+nav a:hover{color:#00dfff}
+section{padding:100px 20px;max-width:1200px;margin:0 auto;position:relative;z-index:1}
+h2{font-size:2.6rem;color:#00dfff;text-align:center;margin-bottom:35px}
+.side-by-side{display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:flex-start}
+.box{background:rgba(255,255,255,0.05);padding:25px;border-radius:14px;box-shadow:0 0 25px rgba(0,0,0,0.5);flex:1 1 300px;max-width:520px;animation:fade .8s ease both}
+.box img{display:block;margin:0 auto 15px;width:120px;height:120px;border-radius:50%}
+.box h3{margin-bottom:10px;color:#00dfff;font-size:1.5rem;text-align:center}
+.box span{display:block;margin-bottom:12px;color:#ccc;text-align:center;font-weight:500}
+.box p{color:#ddd;line-height:1.5;text-align:center}
+.card{background:rgba(0,31,63,0.6);border-radius:14px;box-shadow:0 0 20px rgba(0,0,0,0.6);padding:20px;flex:1 1 300px;max-width:360px;text-align:center;position:relative;animation:fade .8s ease both}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:18px}
+.card h3{font-size:1.5rem;margin-bottom:8px;color:#00dfff}
+.card span{font-size:1.1rem;color:#ccc;margin-bottom:15px;display:block}
+.btn{display:inline-block;padding:12px 28px;background:#00dfff;color:#001f3f;border-radius:8px;font-weight:600;text-decoration:none;transition:background .3s}
+.btn:hover{background:#00aaff}
+.highlight{border:2px solid #00dfff;animation:glow 1.5s infinite ease-in-out}
+.highlight::before{content:"NAJPOPULARNIEJSZY PAKIET";position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#00dfff;padding:6px 16px;border-radius:12px;font-size:.9rem}
+@keyframes glow{0%,100%{box-shadow:0 0 15px #00dfff}50%{box-shadow:0 0 30px #0077aa}}
+.stats{display:flex;flex-wrap:wrap;gap:30px;justify-content:center}
+.stat-box{background:rgba(255,255,255,0.05);padding:30px;border-radius:14px;text-align:center;min-width:200px;animation:fade .8s both}
+.stat-box h3{font-size:2.4rem;color:#00dfff;margin-bottom:8px}
+.stat-box span{color:#ccc;display:block;font-size:1.1rem}
+.faq-item{margin-bottom:20px;animation:fade .8s ease both}
+.faq-item h4{cursor:pointer;position:relative;padding-right:25px;font-weight:600;font-size:1.1rem}
+.faq-item h4::after{content:'+';position:absolute;right:0;top:0;font-size:1.2rem}
+.faq-item.open h4::after{content:'–'}
+.faq-item div{max-height:0;overflow:hidden;transition:max-height .3s ease,opacity .3s ease;opacity:0}
+.faq-item.open div{max-height:200px;opacity:1;margin-top:10px}
+footer{text-align:center;padding:30px;background:rgba(0,31,63,0.9);color:#ccc;margin-top:60px}
+footer a{color:#00dfff;text-decoration:none;font-weight:600}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){.side-by-side{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+<div class="code-bg"></div>
+
+<nav>
+  <img src="logo.png" alt="SharkCode logo">
+  <ul>
+    <li><a href="#zarzad">Zarząd</a></li>
+    <li><a href="#onas">O nas</a></li>
+    <li><a href="#pakiety">Pakiety</a></li>
+    <li><a href="#statystyki">Statystyki</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+</nav>
+
+<section id="zarzad">
+  <h2>Zarząd</h2>
+  <div class="side-by-side">
+    <div class="box">
+      <img src="zarząd2.png" alt="Kapion">
+      <h3>Kapion</h3><span>CEO & Developer</span><p>Kapion – wizjoner SharkCode, lider skryptów i paczek Minecraft.</p>
+    </div>
+    <div class="box">
+      <img src="zarząd1.png" alt="Fabixoo">
+      <h3>Fabixoo</h3><span>CEO & Developer</span><p>Fabixoo – kreator botów Discord i innowacyjnych pluginów.</p>
+    </div>
+  </div>
+</section>
+
+<section id="onas">
+  <h2>O nas & Statystyki</h2>
+  <div class="box" style="max-width:800px;margin:auto;margin-bottom:40px;">
+    <p>SharkCode powstał z pasji do technologii i doświadczenia w branży Discord oraz Minecraft. Naszym celem jest dostarczenie usług najwyższej jakości – niezawodnych, efektywnych i estetycznych, w korzystnej cenie</p>
+  </div>
+  <div class="stats">
+    <div class="stat-box"><h3>2+</h3><span>Lat doświadczenia</span></div>
+    <div class="stat-box"><h3>10+</h3><span>Zadowolonych klientów</span></div>
+    <div class="stat-box"><h3>99.9%</h3><span>Zawsze na czas</span></div>
+  </div>
+</section>
+
+<section id="pakiety">
+  <h2>Pakiety</h2>
+  <div class="side-by-side">
+    <div class="card"><img src="premium.png" alt="Strefa Premium"><h3>Strefa Premium</h3><span>5 zł</span><a href="#" class="btn">Kup teraz</a></div>
+    <div class="card highlight"><img src="discord.png" alt="Pakiet Discord Bot"><h3>Pakiet Discord Bot</h3><span>15 zł</span><a href="#" class="btn">Kup teraz</a></div>
+    <div class="card"><img src="lobby.png" alt="Paczka Lobby"><h3>Paczka Lobby</h3><span>10 zł</span><a href="#" class="btn">Kup teraz</a></div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <div style="max-width:800px;margin:auto">
+    <div class="faq-item"><h4>Jak kupić pakiet?</h4><div><p>Wybierz pakiet i postępuj według instrukcji na Discordzie.</p></div></div>
+    <div class="faq-item"><h4>Czy oferujecie wersję custom?</h4><div><p>Tak, napisz na Discord – przygotujemy rozwiązanie dopasowane do Ciebie.</p></div></div>
+    <div class="faq-item"><h4>Jak działa support?</h4><div><p>Support 24/7 – odpowiadamy w kilka minut na Discordzie.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  © 2025 SharkCode.pl | Dołącz na <a href="https://discord.gg/aSHPpuaWCB" target="_blank">Discord</a>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item h4').forEach(h => h.addEventListener('click', () => h.parentElement.classList.toggle('open')))
+</script>
+</body>
+</html>
