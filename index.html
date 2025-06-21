@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SharkCode</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+      min-height: 100vh;
+      padding-top: 80px;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'),
+        linear-gradient(to bottom, rgba(18, 0, 34, 0.4), rgba(0, 0, 40, 0.6));
+      z-index: 0;
+      pointer-events: none;
+      background-blend-mode: overlay;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(15, 12, 41, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      z-index: 999;
+    }
+
+    nav img {
+      height: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #7b68ee;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      color: #8a2be2;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #7b68ee;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .zarzad {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .czlonek {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      flex: 1 1 280px;
+      max-width: 360px;
+      transition: transform 0.3s ease;
+    }
+
+    .czlonek:hover {
+      transform: translateY(-5px);
+    }
+
+    .czlonek h3 {
+      color: #dcdcff;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .czlonek span {
+      color: #999;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .czlonek p {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #7b68ee;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #9a89ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-top: 60px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #7b68ee;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .czlonek {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="LogoSharkCode.png" alt="Logo SharkCode">
+    <ul>
+      <li><a href="#zarzad">Zespół</a></li>
+      <li><a href="#produkty">Produkty</a></li>
+      <li><a href="#dlaczego">Dlaczego My</a></li>
+      <li><a href="#statystyki">Statystyki</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>SharkCode</h1>
+    <p>Profesjonalne paczki, boty i rozwiązania dla Twojego serwera</p>
+  </header>
+
+  <section id="zarzad" class="container">
+    <h2>Nasz Zespół</h2>
+    <div class="zarzad">
+      <div class="czlonek">
+        <h3>Kapion</h3>
+        <span>Ceo</span>
+        <p>Kapion, Developer Skryptów, Paczek. Uczy się programowania, jest CEO i pilnuje serwera CODE.</p>
+      </div>
+      <div class="czlonek">
+        <h3>Fabixoo</h3>
+        <span>Ceo & Developer</span>
+        <p>Fabixoo – developer botów, skryptów, pluginów i paczek. Zajmuje się kodowaniem i projektami CODE.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="produkty" class="container">
+    <h2>Nasze Produkty</h2>
+    <div class="zarzad">
+      <div class="czlonek">
+        <h3>Paczka Lobby</h3>
+        <span>10 zł</span>
+        <p>Profesjonalna Paczka na lobby, pod zamówienie – customowa dla Ciebie!</p>
+        <a href="https://discord.gg/aSHPpuaWCB" class="btn">Kup teraz</a>
+      </div>
+      <div class="czlonek">
+        <h3>Bot Discord BASIC</h3>
+        <span>7 zł</span>
+        <p>Idealny dla startujących serwerów – powitania, komendy, automatyzacja.</p>
+        <a href="https://discord.gg/aSHPpuaWCB" class="btn">Kup teraz</a>
+      </div>
+      <div class="czlonek">
+        <h3>Bot Discord PRO</h3>
+        <span>15 zł</span>
+        <p>Zaawansowany bot z ticketami, embedami, statystyką i pełną konfiguracją.</p>
+        <a href="https://discord.gg/aSHPpuaWCB" class="btn">Kup teraz</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="dlaczego" class="container">
+    <h2>Dlaczego my?</h2>
+    <div class="zarzad">
+      <div class="czlonek">
+        <h3>Jakościowe Produkty</h3>
+        <p>Każdy nasz produkt jest testowany i dopracowany w najmniejszych szczegółach.</p>
+      </div>
+      <div class="czlonek">
+        <h3>Zaawansowani Twórcy</h3>
+        <p>Nasz zespół to pasjonaci z wieloletnim doświadczeniem w programowaniu i designie.</p>
+      </div>
+      <div class="czlonek">
+        <h3>Support 24/7</h3>
+        <p>Masz problem? Jesteśmy dostępni o każdej porze – pisz do nas na Discordzie!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="statystyki" class="container">
+    <h2>Nasze Statystyki</h2>
+    <div class="zarzad">
+      <div class="czlonek">
+        <h3>+25</h3>
+        <span>Zadowolonych Klientów</span>
+      </div>
+      <div class="czlonek">
+        <h3>+10</h3>
+        <span>Zrealizowanych Zamówień</span>
+      </div>
+      <div class="czlonek">
+        <h3>+30</h3>
+        <span>Stałych Klientów</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SharkCode | Stworzono z pasją 🦈 | Dołącz do nas: 
+    <a href="https://discord.gg/aSHPpuaWCB" target="_blank">Discord</a>
+  </footer>
+</body>
+</html>
