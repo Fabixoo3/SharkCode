@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SharkCode - Profesjonalne Boty Discord</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./logo.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0a0f2c, #1a004a);
+      color: white;
+      overflow-x: hidden;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 16px 32px;
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a855f7;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: radial-gradient(circle at center, #1e0033 0%, #0a0f2c 100%);
+      background-attachment: fixed;
+    }
+    header img {
+      width: 120px;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 20px 0;
+      color: #ffffff;
+    }
+    .highlight {
+      color: #a855f7;
+    }
+    .btn {
+      display: inline-block;
+      margin: 12px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #7c3aed;
+      color: white;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #9f5cf7;
+    }
+    section {
+      padding: 100px 40px;
+      position: relative;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+    }
+    .plans {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .plan {
+      background: linear-gradient(135deg, #250042, #3b006e);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+    .plan:hover {
+      transform: translateY(-10px);
+    }
+    .plan.popular {
+      border: 3px solid #a855f7;
+    }
+    .plan h3 {
+      color: #a855f7;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    .plan p.price {
+      font-size: 1.4rem;
+      margin: 10px 0;
+    }
+    .plan a {
+      display: block;
+      margin: 12px auto 0;
+      padding: 10px;
+      background: #7c3aed;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+    }
+    .plan .features {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      background: linear-gradient(135deg, #1f0036, #32005a);
+      border: 2px solid #a855f7;
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 280px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .stat img {
+      width: 80px;
+      margin-bottom: 16px;
+    }
+    .stat h3 {
+      color: #a855f7;
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+    .stat p {
+      font-size: 1rem;
+      color: #ddd;
+    }
+    footer {
+      background: #0b0b20;
+      padding: 40px 20px;
+      text-align: center;
+      color: #aaa;
+    }
+    footer a {
+      color: #a855f7;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body id="top">
+  <nav>
+    <a href="#top"><strong>SharkCode</strong></a>
+    <div>
+      <a href="#about">O nas</a>
+      <a href="#plans">Kup bota</a>
+      <a href="regulamin.html">Regulamin</a>
+    </div>
+  </nav>
+
+  <header>
+    <img src="logo.png" alt="SharkCode Logo">
+    <h1>Witamy w <span class="highlight">SharkCode</span></h1>
+    <a href="https://dc.gg/sharkcode" class="btn">Dołącz na Discorda</a>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">Poznaj Nas</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Kim jesteśmy?</h3>
+        <p>Jesteśmy zespołem pasjonatów programowania tworzącym profesjonalne boty na Discorda od 2024 roku.</p>
+      </div>
+      <div class="plan">
+        <h3>Nasza misja</h3>
+        <p>Chcemy ułatwić zarządzanie Twoim serwerem poprzez nowoczesne i personalizowane boty.</p>
+      </div>
+      <div class="plan">
+        <h3>Zaufanie</h3>
+        <p>Obsługujemy ponad 5+ serwerów i stale rozwijamy nasze produkty.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2 class="section-title">Statystyki</h2>
+    <div class="stats">
+      <div class="stat">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Serwery">
+        <h3>5+</h3>
+        <p>Serwerów używa naszych botów</p>
+      </div>
+      <div class="stat">
+        <img src="globe.png" alt="Komendy">
+        <h3>50+</h3>
+        <p>Unikalnych komend dostępnych</p>
+      </div>
+      <div class="stat">
+        <img src="phone-call.png" alt="Wsparcie">
+        <h3>24/7</h3>
+        <p>Wsparcie na Discordzie</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <h2 class="section-title">Pakiety Botów Discord</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Basic</h3>
+        <p class="price">5zł</p>
+        <p>Idealny na start</p>
+        <div class="features">
+          <strong>Funkcje:</strong>
+          <ul>
+            <li>Podstawowe komendy</li>
+            <li>Wsparcie przez Discord</li>
+            <li>Gotowy do użytku</li>
+          </ul>
+        </div>
+        <a href="https://dc.gg/sharkcode">Zobacz funkcje</a>
+      </div>
+      <div class="plan popular">
+        <h3>LITE</h3>
+        <p class="price">10zł</p>
+        <p>Najpopularniejszy wybór</p>
+        <div class="features">
+          <strong>Funkcje:</strong>
+          <ul>
+            <li>Wszystko z Basic</li>
+            <li>Dodatkowe komendy moderacji</li>
+            <li>Personalizacja prefixów</li>
+            <li>Szybkie aktualizacje</li>
+            <li>System Weryfikacji + Ticket select menu/button</li>
+            <li>Autorola</li>
+            <li>System partnerstw</li>
+          </ul>
+        </div>
+        <a href="https://dc.gg/sharkcode">Zobacz funkcje</a>
+      </div>
+      <div class="plan">
+        <h3>PRO</h3>
+        <p class="price">15zł</p>
+        <p>Pełna moc i elastyczność</p>
+        <div class="features">
+          <strong>Funkcje:</strong>
+          <ul>
+            <li>Wszystko z LITE</li>
+            <li>Integracja z zewn. API</li>
+            <li>Baza danych</li>
+            <li>Priorytetowe wsparcie</li>
+            <li>System rekrutacji</li>
+          </ul>
+        </div>
+        <a href="https://dc.gg/sharkcode">Zobacz funkcje</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SharkCode.pl — Wszelkie prawa zastrzeżone. Twórca strony: Fabixoo<br>
+    <a href="regulamin.html">Regulamin</a>
+  </footer>
+</body>
+</html>
